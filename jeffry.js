@@ -17,8 +17,8 @@ class Person {
 
 // Instantiate and interact with the object
 let person1 = new Person("Jeffry", 21, "Front-End Developer");
-console.log(person1.getInfo()); // Output: Name: Alice Brown, Age: 28, Job: Software Developer
+console.log(person1.getInfo()); // 
 
 // Update the job
 person1.setJob("Senior Developer");
-console.log(person1.getInfo()); // Output: Name: Alice Brown, Age: 28, Job: Senior Developer
+console.log(person1.getInfo()); // 
