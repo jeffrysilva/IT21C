@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work on the Methods</title>
+</head>
+<body>
+
+<h1>Work on the Methods</h1>
+<p id="output">Display output here.</p> <!-- Added an id for targeting -->
+
+<script>
+class Person {
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+
+    getInfo() {
+        return `Name: ${this.name}, Age: ${this.age}, Job: ${this.job}`;
+    }
+
+    // Method to update job
+    setJob(newJob) {
+        this.job = newJob;
+    }
+}
+
+// Instantiate and interact with the object
+let person1 = new Person("Jeffry", 21, "Front-End Developer");
+
+// Display initial info in the paragraph
+document.getElementById("output").textContent = person1.getInfo(); 
+
+// Update the job
+person1.setJob("Senior Developer");
+
+// Update the output in the paragraph with the new info
+document.getElementById("output").textContent = person1.getInfo();
+</script>
+
+</body>
+</html>
