@@ -1,20 +1,24 @@
-// Define a class called 'Person'
 class Person {
-    constructor(name, age) {
+    constructor(name, age, job) {
         this.name = name;
         this.age = age;
+        this.job = job;
     }
 
-    // Method to display person's information
     getInfo() {
-        return `Name: ${this.name}, Age: ${this.age}`; // Use backticks and proper string interpolation
+        return `Name: ${this.name}, Age: ${this.age}, Job: ${this.job}`; // Use backticks and proper interpolation
+    }
+
+    // Method to update job
+    setJob(newJob) {
+        this.job = newJob;
     }
 }
 
-// Instantiate objects from the class
-let person1 = new Person("John Doe", 25);
-let person2 = new Person("Jane Smith", 30);
+// Instantiate and interact with the object
+let person1 = new Person("Alice Brown", 28, "Software Developer");
+console.log(person1.getInfo()); // Output: Name: Alice Brown, Age: 28, Job: Software Developer
 
-// Display information
-console.log(person1.getInfo()); // Output: Name: John Doe, Age: 25
-console.log(person2.getInfo()); // Output: Name: Jane Smith, Age: 30
+// Update the job
+person1.setJob("Senior Developer");
+console.log(person1.getInfo()); // Output: Name: Alice Brown, Age: 28, Job: Senior Developer
